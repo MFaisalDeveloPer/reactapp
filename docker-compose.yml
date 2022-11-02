@@ -1,0 +1,12 @@
+version: "2.12.0"
+services:
+  app:
+    build:
+      context: .
+    volumes:
+      - .:/reactapp
+    ports:
+      - 3000:3000
+    image: app:react
+    container_name: react_container
+    command: npm start
